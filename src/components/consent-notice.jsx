@@ -219,8 +219,8 @@ export default class ConsentNotice extends React.Component {
             );
         const visibleHeader = t(['!', 'consentNotice', 'title']);
         const notice = (
-            <div
-                role="dialog"
+            <dialog
+                open="true"
                 aria-describedby="id-cookie-notice"
                 aria-labelledby={
                     visibleHeader ? 'id-cookie-title' : 'id-cookie-notice'
@@ -237,7 +237,7 @@ export default class ConsentNotice extends React.Component {
                     embedded ? 'cn-embedded' : ''
                 }`}
             >
-                <div className="cn-body">
+                <div>
                     {visibleHeader && (
                         <h2 id="id-cookie-title">
                             {t(['consentNotice', 'title'])}
@@ -265,7 +265,7 @@ export default class ConsentNotice extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </dialog>
         );
 
         if (!noticeAsModal) return notice;
