@@ -169,26 +169,16 @@ export default class ConsentNotice extends React.Component {
             </button>
         );
 
-        const learnMoreLink = () =>
-            noticeAsModal ? (
-                <button
-                    key="learnMoreLink"
-                    className="cm-btn cm-btn-lern-more cm-btn-info"
-                    type="button"
-                    onClick={showModal}
-                >
-                    {t(['consentNotice', 'learnMore'])}
-                </button>
-            ) : (
-                <a
-                    key="learnMoreLink"
-                    className="cm-link cn-learn-more"
-                    href="#"
-                    onClick={showModal}
-                >
-                    {t(['consentNotice', 'learnMore'])}
-                </a>
-            );
+        const learnMoreLink = (
+            <button
+                key="learnMoreLink"
+                className="cm-btn cm-btn-learn-more cm-btn-info"
+                type="button"
+                onClick={showModal}
+            >
+                {t(['consentNotice', 'learnMore'])}
+            </button>
+        )
 
         let ppLink;
 
@@ -251,15 +241,15 @@ export default class ConsentNotice extends React.Component {
                                     <strong key="strong">{purposesText}</strong>
                                 ),
                                 privacyPolicy: ppLink,
-                                learnMoreLink: learnMoreLink(),
+                                learnMoreLink: learnMoreLink,
                             })}
                         />
                     </p>
                     {testing && <p>{t(['consentNotice', 'testing'])}</p>}
                     {changesText}
                     <div className="cn-ok">
-                        {!hideLearnMore && learnMoreLink()}
                         <div className="cn-buttons">
+                            {!hideLearnMore && learnMoreLink}
                             {declineButton}
                             {acceptButton}
                         </div>
