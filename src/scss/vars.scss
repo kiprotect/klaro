@@ -3,7 +3,8 @@ We declare all variables here as default so that they are easy to override...
 */
 
 /* Border, shadows, ... */
-$cm-box-shadow-dark-md: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 5px 5px 10px 0 rgba(0, 0, 0, 0.19) !default;
+$cm-box-shadow-dark-md: 0 4px 6px 0 rgba(0, 0, 0, 0.2),
+    5px 5px 10px 0 rgba(0, 0, 0, 0.19) !default;
 $cm-box-shadow-light-sm: 0 2px 5px 0 rgba(0, 0, 0, 0.11) !default;
 $cm-box-shadow-dark-sm: 0 2px 5px 0 rgba(0, 0, 0, 0.33) !default;
 
@@ -14,7 +15,7 @@ mechanism.
 */
 
 /* Border styles */
-$var-border-radius: 4px !default;
+$var-border-radius: 20px !default;
 $var-border-style: solid !default;
 $var-border-width: 1px !default;
 
@@ -100,7 +101,6 @@ $vars: (
     white3: $var-white3,
 
     // non-color options
-
     border-radius: $var-border-radius,
     border-style: $var-border-style,
     border-width: $var-border-width,
@@ -131,11 +131,10 @@ $cm-space: (
     md: 12px,
     lg: 24px,
     xl: 48px,
-    xxl: 96px
+    xxl: 96px,
 ) !default;
 
 /* Breakpoints */
 $cm-desktop: 1024px !default;
 $cm-mobile: 384px !default;
 $cm-tablet: 768px !default;
-
